@@ -33,6 +33,10 @@ RUN /usr/local/bin/install-plugins.sh workflow-scm-step
 RUN /usr/local/bin/install-plugins.sh pipeline-stage-step
 RUN /usr/local/bin/install-plugins.sh kubernetes-pipeline-devops-steps
 
+RUN /usr/local/bin/install-plugins.sh junit
+RUN /usr/local/bin/install-plugins.sh ant
+RUN /usr/local/bin/install-plugins.sh pipeline-maven
+
 # install Maven
 USER root
 RUN apt-get update && apt-get install -y maven
