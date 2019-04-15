@@ -18,8 +18,20 @@ RUN /usr/local/bin/install-plugins.sh simple-theme-plugin
 # Scaling
 RUN /usr/local/bin/install-plugins.sh kubernetes
 
+# SCM
+RUN /usr/local/bin/install-plugins.sh git
+RUN /usr/local/bin/install-plugins.sh github
+RUN /usr/local/bin/install-plugins.sh git-parameter
+RUN /usr/local/bin/install-plugins.sh github-pullrequest
+
 # Pipeline
-RUN /usr/local/bin/install-plugins.sh pipeline
+RUN /usr/local/bin/install-plugins.sh workflow-multibranch
+RUN /usr/local/bin/install-plugins.sh pipeline-timeline
+RUN /usr/local/bin/install-plugins.sh pipeline-model-definition
+RUN /usr/local/bin/install-plugins.sh build-pipeline-plugin
+RUN /usr/local/bin/install-plugins.sh workflow-scm-step
+RUN /usr/local/bin/install-plugins.sh pipeline-stage-step
+RUN /usr/local/bin/install-plugins.sh kubernetes-pipeline-devops-steps
 
 # install Maven
 USER root
